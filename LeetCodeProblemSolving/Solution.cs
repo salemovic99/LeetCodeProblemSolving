@@ -6,7 +6,36 @@ namespace LeetCodeProblemSolving
     {
 
 
+        public static IList<IList<int>> Generate(int numRows)
+        {
+            IList<IList<int>> pascalTringle = new List<IList<int>>();
 
+
+
+            for (int i = 1; i < numRows; i++)
+            {
+                IList<int> row = new List<int>();
+
+                for (int j = 0; j <= i; j++)
+                {
+
+
+                    if (j == 0 || j == i)
+                    {
+                        row.Add(1);
+                    }
+                    else
+                    {
+                        row.Add(pascalTringle[i - 1][j - 1] + pascalTringle[i - 1][j]);
+
+                    }
+                }
+                pascalTringle.Add(row);
+            }
+
+
+            return pascalTringle;
+        }
         public static int LengthOfLastWord(string s)
         {
             s = s.Trim();
