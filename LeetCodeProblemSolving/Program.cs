@@ -12,5 +12,10 @@
 //Console.WriteLine(Solution.LengthOfLastWord("luffy is still joyboy"));//6
 
 
+using LeetCodeProblemSolving;
+
+//Console.WriteLine(Solution.RomanToInt("III"));
+//Console.WriteLine(Solution.RomanToInt("LVIII"));
+Console.WriteLine(Solution.RomanToInt("MCMXCIV"));
 
 
