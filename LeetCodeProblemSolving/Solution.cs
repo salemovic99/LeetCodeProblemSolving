@@ -5,6 +5,58 @@ namespace LeetCodeProblemSolving
     public static class Solution
     {
 
+        public static IList<string> FizzBuzz(int n)
+        {
+            List<string> list = new List<string>();
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    list.Add("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    list.Add("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    list.Add("Buzz");
+                }
+                else
+                {
+                    list.Add(i.ToString());
+                }
+            }
+
+            return list;
+        }
+        public static int FindFinalValue(int[] nums, int original)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums.Contains(original))
+                {
+                    original *= 2;
+                }
+            }
+
+            return original;
+        }
+
+        public static int SumOfMultiples(int n)
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0)
+                {
+                    sum += i;
+                }
+            }
+
+            return sum;
+        }
         public static int RomanToInt(string s)
         {
             Dictionary<char, int> map = new Dictionary<char, int>
